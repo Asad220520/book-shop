@@ -1,0 +1,45 @@
+#newBooks {
+  .newBooks {
+    h1 {
+      color: #19272e;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 500;
+    }
+
+    &__img {
+      padding-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      gap: 64px;
+      &-block {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        &:nth-child(1) {
+          padding-top: 40px;
+        }
+        &:nth-child(3) {
+          padding-top: 40px;
+        }
+        img {
+          width: 100%;
+        }
+        p {
+          color: #19272e;
+          font-size: 18px;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 8px 0;
+        }
+        span {
+          color: #19272e;
+          font-size: 18px;
+          font-weight: 400;
+          opacity: 0.699999988079071;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+
+
+.Content {
+  min-height: calc(100vh - (headerHeight + footerHeight));
+  padding-bottom: footerHeight;
+  box-sizing: border-box;
+}
