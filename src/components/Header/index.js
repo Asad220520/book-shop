@@ -21,13 +21,7 @@ const Header = () => {
                 Bookshop
               </NavLink>
               <ul className="menu">
-                <li
-                  className="menu__item"
-                  onClick={() => setBurger(!burger)}
-                  style={{
-                    display: burger === false ? "flex" : "none",
-                  }}
-                >
+                <li className={burger ? "menu__item" : "active"}>
                   <NavLink to={"/Categories"} className="menu__NavLink">
                     Categories
                   </NavLink>
@@ -69,9 +63,9 @@ const Header = () => {
                     <sup>{basket.length}</sup>
                   </Link>
                 </div>
-                <div onClick={() => setBurger(!burger)} className="burger">
-                  {burger === false ? "X" : "|||"}
-                </div>
+              </div>
+              <div onClick={() => setBurger(!burger)} className="burger">
+                {burger ? "X" : "|||"}
               </div>
             </nav>
           </div>
