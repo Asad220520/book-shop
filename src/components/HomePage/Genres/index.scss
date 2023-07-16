@@ -21,8 +21,13 @@
     &__img {
       display: grid;
       grid-template-columns: repeat(6, auto);
+      overflow-x: auto;
+      gap: 20px;
       justify-content: space-between;
       padding-top: 64px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       &-block {
         display: flex;
         flex-direction: column;
@@ -40,6 +45,17 @@
         p {
           padding: 24px 0;
           color: #19272e;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  #genres {
+    .genres {
+      &__block {
+        h1 {
+          font-size: 38px;
         }
       }
     }

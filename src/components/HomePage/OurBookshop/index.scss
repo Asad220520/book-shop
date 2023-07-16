@@ -13,13 +13,28 @@
       color: #fff;
       font-size: 48px;
       font-weight: 700;
+      text-align: center;
     }
     p {
       text-align: center;
       padding-top: 16px;
-      color:#19272e;
+      color: #19272e;
       font-size: 18px;
       font-weight: 400;
+    }
+  }
+}
+@media (max-width: 700px) {
+  #ourBokshop {
+    min-height: 540px;
+    .ourBokshop {
+      h1 {
+        font-size: 38px;
+        font-weight: 700;
+      }
+      p {
+        text-align: center;
+      }
     }
   }
 }

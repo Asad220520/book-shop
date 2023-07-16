@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { RiShareFill } from "react-icons/ri";
 import "./index.scss";
-import { useDispatch } from "react-redux";
-import { addToBasket } from "../../redux/Actions";
+import { useDispatch, useSelector } from "react-redux";
+import { addToBasket, addToFavorite } from "../../redux/Actions";
 const BookDetails = () => {
   const { bookId } = useParams();
   const [book, setBook] = useState({});
-  const [hear, setHear] = useState(false);
+  const { favorite, basket } = useSelector((r) => r);
   const dispatch = useDispatch();
+  //
+  const handleAddToFavorite = () => {
+    dispatch(addToFavorite(book));
+  };
+  //
+  const favor = favorite.some((some) => some.id === book.id);
+  const bask = basket.some((some) => some.id === book.id);
+  const nav = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -45,18 +53,18 @@ const BookDetails = () => {
             <div className="detailsPage__block-title">
               <div className="detailsPage__block-title-hear">
                 <h1>{book.volumeInfo?.title}</h1>
-                <div onClick={() => dispatch({ type: "ADD_HEAR" })}>
-                  <div
-                    onClick={() => setHear(true)}
-                    style={{
-                      cursor: "pointer",
-                      color: hear === false ? "" : "red",
-                    }}
-                  >
-                    <FaHeart />
-                    <span>{hear === false ? "избранный" : "добавленно"}</span>
+                {favor ? (
+                  <div onClick={handleAddToFavorite}>
+                    <FaHeart style={{ color: "red" }} />
+                    <span>добавлено</span>
                   </div>
-                </div>
+                ) : (
+                  <div onClick={handleAddToFavorite}>
+                    <FaHeart />
+                    <span>избранный</span>
+                  </div>
+                )}
+
                 <div
                   style={{
                     cursor: "pointer",
@@ -71,9 +79,21 @@ const BookDetails = () => {
               <h2>$99</h2>
             </div>
             <div className="detailsPage__block-btn">
-              <button onClick={() => dispatch(addToBasket(book))}>
-                Add to Cart
-              </button>
+              {bask ? (
+                <button
+                  style={{ background: "#800080 " }}
+                  onClick={() => {
+                    nav("/basket");
+                    dispatch(addToBasket(book));
+                  }}
+                >
+                  added to Cart
+                </button>
+              ) : (
+                <button onClick={() => dispatch(addToBasket(book))}>
+                  Add to Cart
+                </button>
+              )}
               {/* <Link>
                 <button className="btn">
                   <span onClick={() => dispatch({ type: "TAKE_COUNT" })}>

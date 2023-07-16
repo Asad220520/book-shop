@@ -9,13 +9,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      &__logo {
+        color: #818eea;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+      }
       .menu {
-        &__logo {
-          color: #818eea;
-          font-size: 20px;
-          font-weight: 700;
-          letter-spacing: -0.6px;
-        }
         h1 {
           color: #fff;
         }
@@ -52,7 +52,7 @@
             border-radius: 10px;
             border: none;
             background: #e8e5e5;
-            &::placeholder{
+            &::placeholder {
               font-size: 15px;
             }
           }
@@ -60,7 +60,7 @@
             position: absolute;
             right: 5px;
             cursor: pointer;
-            &:hover{
+            &:hover {
               color: #535eb8;
             }
           }
@@ -71,16 +71,99 @@
           align-items: center;
           color: #19272e;
           &__icon {
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
-            // border: 1px solid #beb6b6;
-            // border-radius: 50%;
-            // width: 50px;
-            // height: 50px;
           }
           span {
             font-size: 20px;
+          }
+        }
+      }
+      .burger {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  #header {
+    .header {
+      .nav {
+        &__logo {
+        }
+        .menu {
+          &__item {
+            position: absolute;
+            top: 95px;
+            left: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: #19272e;
+            padding: 20px;
+          }
+          &__NavLink {
+            color: #fff;
+          }
+        }
+        &__icon {
+          .burger {
+            display: block;
+            transform: rotate(90deg);
+          }
+          .search {
+            input {
+              position: absolute;
+              right: 0;
+            }
+            &__ser {
+              position: absolute;
+              right: 0;
+            }
+          }
+          .div {
+            &__icon {
+            }
+            span {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  #header {
+    padding: 40px;
+    .header {
+      .nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        &__logo {
+        }
+        &__icon {
+          .burger {
+            display: block;
+            transform: rotate(90deg);
+          }
+          .search {
+            display: flex;
+            input {
+              position: absolute;
+              top: 20px;
+              left: 0;
+            }
+            &__ser {
+              display: flex;
+            }
+          }
+          .div {
+            &__icon {
+            }
+            span {
+            }
           }
         }
       }

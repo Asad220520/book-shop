@@ -43,3 +43,28 @@
     }
   }
 }
+@media (max-width: 800px) {
+  #newBooks {
+    .newBooks {
+      h1 {
+        font-size: 38px;
+      }
+      
+      &__img {
+        overflow-x: auto;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+        &-block {
+          display: flex;
+          &:nth-child(1) {
+            padding-top: 0;
+          }
+          &:nth-child(3) {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -23,7 +23,7 @@
       display: flex;
       gap: 40px;
       overflow-x: scroll;
-      &::-webkit-scrollbar{
+      &::-webkit-scrollbar {
         display: none;
       }
       img {
@@ -42,6 +42,17 @@
         font-size: 18px;
         font-weight: 400;
         opacity: 0.699999988079071;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  #books {
+    .books {
+      &__block {
+        h1 {
+          font-size: 38px;
+        }
       }
     }
   }
