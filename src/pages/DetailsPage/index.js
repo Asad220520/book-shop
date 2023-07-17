@@ -7,6 +7,7 @@ import "./index.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket, addToFavorite } from "../../redux/Actions";
 const BookDetails = () => {
+  window.scrollTo(0, 0);
   const { bookId } = useParams();
   const [book, setBook] = useState({});
   const { favorite, basket } = useSelector((r) => r);

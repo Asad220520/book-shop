@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BasketCard from "../BasketCard";
 const Basket = () => {
+  window.scrollTo(0, 0);
   const { basket } = useSelector((s) => s);
   return (
     <div id="cart">
