@@ -1,59 +1,55 @@
 #footer {
-  background: #818EEA;
+  background: #818eea;
   margin-top: 5%;
 
   .footer {
-
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 50px 0;
 
     &--sing {
-      position: relative;
-
+      // position: relative;
       h1 {
         font-weight: 600;
         font-size: 36px;
         line-height: 44px;
-        letter-spacing: -1.5px;
-        color: #FFFFFF;
+        color: #ffffff;
       }
 
       p {
         font-weight: 400;
         font-size: 14px;
-        letter-spacing: -0.3px;
-        color: #FFFFFF;
+        color: #ffffff;
         padding: 15px 0;
       }
-
-      input {
-        border: 1px solid #FFFFFF;
-        border-radius: 8px;
+      &-lon {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        border: 1px solid #ffffff;
         width: 100%;
         height: 40px;
-        background: transparent;
-        font-weight: 400;
-        font-size: 14px;
-        color: white;
-        padding-left: 10px;
-        outline: none;
-      }
-        input::placeholder{
-          color: #fff;
-          opacity: 0.7;
+        border-radius: 8px;
+        input {
+          background: transparent;
+          font-weight: 400;
+          font-size: 14px;
+          color: white;
+          padding-left: 10px;
+          outline: none;
+          border: none;
         }
-
-      button {
-        position: absolute;
-        bottom: 12px;
-        right: 10px;
-        font-size: 14px;
-        align-items: center;
-        color: #FFFFFF;
-        border: none;
-        background: none;
+        input::placeholder {
+          color: #fff;
+        }
+        button {
+          font-size: 14px;
+          align-items: center;
+          color: #ffffff;
+          border: none;
+          background: none;
+        }
       }
 
       &__lorem {
@@ -69,12 +65,11 @@
           padding: 5px 50px;
 
           h1 {
-
             font-weight: 600;
             font-size: 25px;
             line-height: 22px;
             letter-spacing: -0.4px;
-            color: #FFFFFF;
+            color: #ffffff;
             //padding: 30px 10px;
             padding: 10px 0;
           }
@@ -84,7 +79,7 @@
             font-size: 20px;
             line-height: 22px;
             letter-spacing: -0.4px;
-            color: #FFFFFF;
+            color: #ffffff;
             //padding: 30px 10px;
             padding: 10px 0;
           }
@@ -92,8 +87,7 @@
           a {
             font-weight: 500;
             letter-spacing: -0.2px;
-            color: #FFFFFF;
-            opacity: 0.5;
+            color: #ffffff;
             text-decoration: none;
             padding: 10px 0;
             font-size: 20px;
@@ -115,16 +109,14 @@
             }
           }
         }
-
       }
     }
   }
 }
 @media (max-width: 1140px) {
-  .container{
+  .container {
     width: 90%;
   }
-
 }
 @media (max-width: 1000px) {
   #footer {
@@ -143,13 +135,13 @@
           font-size: 24px;
           line-height: 28px;
           letter-spacing: 0.5px;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         p {
           font-weight: 400;
           font-size: 16px;
-          color: #FFFFFF;
+          color: #ffffff;
           padding: 15px 0;
         }
 
@@ -161,13 +153,12 @@
 
         button {
           align-items: center;
-          color: #FFFFFF;
+          color: #ffffff;
           border: none;
           background: none;
         }
 
         &__lorem {
-
           &--sum {
             display: flex;
             align-items: center;
@@ -178,7 +169,7 @@
             h1 {
               font-weight: 600;
               font-size: 20px;
-              color: #FFFFFF;
+              color: #ffffff;
               padding: 10px 0;
               letter-spacing: 1px;
             }
@@ -186,13 +177,13 @@
             h2 {
               font-weight: 600;
               font-size: 16px;
-              color: #FFFFFF;
+              color: #ffffff;
             }
 
             a {
               font-size: 18px;
               font-weight: 500;
-              color: #FFFFFF;
+              color: #ffffff;
             }
 
             &__ic {
@@ -231,13 +222,13 @@
           font-size: 24px;
           line-height: 28px;
           letter-spacing: 0.5px;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         p {
           font-weight: 400;
           font-size: 16px;
-          color: #FFFFFF;
+          color: #ffffff;
           padding: 15px 0;
         }
 
@@ -249,7 +240,7 @@
 
         button {
           align-items: center;
-          color: #FFFFFF;
+          color: #ffffff;
           border: none;
           background: none;
         }
@@ -270,7 +261,7 @@
             h1 {
               font-weight: 600;
               font-size: 20px;
-              color: #FFFFFF;
+              color: #ffffff;
               padding: 10px 0;
               letter-spacing: 1px;
             }
@@ -278,13 +269,13 @@
             h2 {
               font-weight: 600;
               font-size: 16px;
-              color: #FFFFFF;
+              color: #ffffff;
             }
 
             a {
               font-size: 18px;
               font-weight: 500;
-              color: #FFFFFF;
+              color: #ffffff;
             }
 
             &__ic {

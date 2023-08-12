@@ -23,7 +23,7 @@ function App() {
           <Route path="/Categories" element={<Categories />} />
           <Route path="/Recent" element={<Recent />} />
           <Route path="/Books" element={<Books />} />
-          <Route path="/basket" element={<Basket/>} />
+          <Route path="/basket" element={<Basket />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/book/details/:bookId" element={<Details />} />
           <Route path="/viewAllBooks" element={<ViewAllBooks />} />

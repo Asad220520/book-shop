@@ -36,7 +36,11 @@
         .active {
           color: #535eb8;
         }
+        .nav-close-btn {
+          opacity: 0;
+        }
       }
+
       &__icon {
         display: flex;
         align-items: center;
@@ -78,7 +82,11 @@
           }
         }
       }
-      .burger {
+      .nav-btn {
+        padding: 5px;
+        font-size: 26px;
+        visibility: hidden;
+        opacity: 0;
         display: none;
       }
     }
@@ -92,32 +100,66 @@
         &__logo {
           position: relative;
         }
-        display: flex;
-        justify-content: space-between;
         .menu {
-          &__item {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          top: 0;
+          right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #000;
+          margin: 0 auto;
+          transition: 0.8s;
+          transform: translateX(-100vh);
+          z-index: 99 !important;
+          a {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 500;
+            padding: 8px 0;
+            transition: 0.4s;
+          }
+          .nav-close-btn {
             position: absolute;
-            top: 100%;
-            left: 0;
-            transition: left 2s;
+            top: 5%;
+            right: 25px;
+            font-size: 24px;
+            z-index: 99;
+            opacity: 1;
+            width: 32px;
+            color: #fff;
+            height: 32px;
+            &::after {
+              position: absolute;
+              left: 15px;
+              content: " ";
+              height: 33px;
+              width: 2px;
+              background-color: #333;
+              transform: rotate(45deg);
+            }
+            &::before {
+              position: absolute;
+              left: 15px;
+              content: " ";
+              height: 33px;
+              width: 2px;
+              background-color: #333;
+              transform: rotate(-45deg);
+            }
+          }
+          &__item {
+            display: flex;
             flex-direction: column;
             align-items: center;
-            background: #19272e;
-            padding: 30px;
-          }
-          .active {
-            display: none;
-          }
-          &__NavLink {
-            color: #fff;
           }
         }
-        .burger {
-          position: absolute;
-          left: 10px;
-          display: block;
-          transform: rotate(90deg);
+        .responsive_nav {
+          transform: none;
         }
+
         &__icon {
           // position: absolute;
           // right: 50px;
@@ -140,6 +182,22 @@
             }
             span {
             }
+          }
+        }
+        .nav-btn {
+          visibility: visible;
+          display: block;
+          opacity: 1;
+          padding-left: 30px;
+          li {
+            width: 25px;
+            height: 2px;
+            background: #333;
+            margin: 4px 0;
+          }
+          .li {
+            width: 20px;
+            margin-left: 5px;
           }
         }
       }

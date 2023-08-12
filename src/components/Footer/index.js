@@ -21,8 +21,10 @@ const Footer = () => {
             <p>
               Be the first to know about our special offers, news, and updates.
             </p>
-            <input type="text" placeholder="Email Address" />
-            <button>Sign Up</button>
+            <div className="footer--sing-lon">
+              <input type="text" placeholder="Email Address" />
+              <button>Sign Up</button>
+            </div>
           </div>
 
           <div className="footer--sing__lorem">
@@ -41,9 +43,7 @@ const Footer = () => {
             <div className="footer--sing__lorem--sum">
               <h1>Address:</h1>
               <h2>Kyrgystan/Bishkek</h2>
-              <Link>
-                {/* <HiLocationMarker /> Turusbekova 109/3 */}
-              </Link>
+              <Link>{/* <HiLocationMarker /> Turusbekova 109/3 */}</Link>
               <div className="footer--sing__lorem--sum__icons">
                 <Link>
                   <BsLinkedin />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineHeart, AiOutlineShopping } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
@@ -11,6 +11,11 @@ const Header = () => {
   const [search, setSearch] = useState(false);
   const [burger, setBurger] = useState(false);
   const { favorite } = useSelector((r) => r);
+
+  const navRef = useRef();
+  const showBurger = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
   return (
     <>
       <div id="header">
@@ -20,8 +25,8 @@ const Header = () => {
               <NavLink className="menu__logo" to={"/"}>
                 Bookshop
               </NavLink>
-              <ul className="menu">
-                <li className={burger ? "menu__item" : "active"}>
+              <ul ref={navRef} className="menu">
+                <li className="menu__item">
                   <NavLink to={"/Categories"} className="menu__NavLink">
                     Categories
                   </NavLink>
@@ -35,6 +40,7 @@ const Header = () => {
                     About Us
                   </NavLink>
                 </li>
+                <ul className="nav-btn nav-close-btn" onClick={showBurger}></ul>
               </ul>
               <div className="nav__icon">
                 <div className="search">
@@ -64,9 +70,11 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              <div onClick={() => setBurger(!burger)} className="burger">
-                {burger ? "X" : "|||"}
-              </div>
+              <ul onClick={showBurger} className="nav-btn">
+                <li></li>
+                <li className="li"></li>
+                <li></li>
+              </ul>
             </nav>
           </div>
         </div>
