@@ -25,7 +25,7 @@ const Header = () => {
               <NavLink className="menu__logo" to={"/"}>
                 Bookshop
               </NavLink>
-              <ul ref={navRef} className="menu">
+              <ul ref={navRef} onClick={showBurger}className="menu">
                 <li className="menu__item">
                   <NavLink to={"/Categories"} className="menu__NavLink">
                     Categories
