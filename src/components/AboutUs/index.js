@@ -1,5 +1,5 @@
-import React from 'react'
-import './index.scss'
+import React from "react";
+import "./index.scss";
 import about from "../../img/about.png";
 const AboutUs = () => {
   return (
@@ -22,6 +22,6 @@ const AboutUs = () => {
       </div>
     </div>
   );
-}
+};
 
-export default AboutUs
+export default AboutUs;
