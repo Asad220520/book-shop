@@ -22,10 +22,10 @@ const Header = () => {
         <div className="container">
           <div className="header">
             <nav className="nav">
-              <NavLink className="menu__logo" to={"/"}>
-                Bookshop
-              </NavLink>
-              <ul ref={navRef} onClick={showBurger}className="menu">
+              <ul ref={navRef} onClick={showBurger} className="menu">
+                <NavLink className="menu__logo" to={"/"}>
+                  Bookshop
+                </NavLink>
                 <li className="menu__item">
                   <NavLink to={"/Categories"} className="menu__NavLink">
                     Categories
@@ -40,7 +40,7 @@ const Header = () => {
                     About Us
                   </NavLink>
                 </li>
-                <ul className="nav-btn nav-close-btn" onClick={showBurger}></ul>
+                <ul className="nav-btn nav-close-btn"></ul>
               </ul>
               <div className="nav__icon">
                 <div className="search">
