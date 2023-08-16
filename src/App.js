@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -14,9 +14,11 @@ import ViewAllGenres from "./pages/ViewAllGenres";
 import Basket from "./components/Basket";
 
 function App() {
+  const local = useLocation();
+  const isLocal = local.pathname.includes("/AboutUs");
   return (
     <div className="App">
-      <Header />
+      {!isLocal && <Header />}
       <div className="Content">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -30,7 +32,7 @@ function App() {
           <Route path="/viewAllGenres" element={<ViewAllGenres />} />
         </Routes>
       </div>
-      <Footer />
+      {<Footer />}
     </div>
   );
 }
