@@ -3,7 +3,6 @@ import { Reducer } from "./reducer";
 
 export const store = createStore(Reducer);
 
-
 // const storedState = localStorage.getItem("reduxState");
 // const initialStateFromStorage = storedState ? JSON.parse(storedState) : {};
 

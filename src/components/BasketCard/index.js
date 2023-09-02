@@ -12,8 +12,6 @@ const BasketCard = ({ el }) => {
   return (
     <>
       <div className="cart">
-      
-
         <div className="cart__img">
           <img
             src={el.volumeInfo?.imageLinks?.thumbnail}
@@ -44,7 +42,7 @@ const BasketCard = ({ el }) => {
       <hr
         style={{
           margin: "20px 0",
-          width: '44%'
+          width: "44%",
         }}
       />
     </>
