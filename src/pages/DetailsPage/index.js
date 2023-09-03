@@ -85,7 +85,6 @@ const BookDetails = () => {
                   style={{ background: "#800080 " }}
                   onClick={() => {
                     nav("/basket");
-                    dispatch(addToBasket(book));
                   }}
                 >
                   added to Cart
