@@ -2,17 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../../../Api";
 
 const NewBooks = () => {
-    const [book, setBook] = useState([]);
-    const getBooks = () => {
-      axios(`https://www.googleapis.com/books/v1/volumes?q=javascript`).then(
-        (res) => setBook(res.data.items)
-      );
-    };
-    useEffect(() => {
-      getBooks();
-    }, []);
+  const [book, setBook] = useState([]);
+  const getBooks = () => {
+    axios(`${BASE_URL}books/v1/volumes?q=javascript`).then((res) =>
+      setBook(res.data.items)
+    );
+  };
+  useEffect(() => {
+    getBooks();
+  }, []);
   return (
     <div id="newBooks">
       <div className="container">

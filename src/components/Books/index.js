@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.scss";
 import axios from "axios";
+import { BASE_URL } from "../../Api";
 const Books = () => {
   const [book, setBook] = useState([]);
   const getBooks = () => {
-    axios(`https://www.googleapis.com/books/v1/volumes?q=javascript`).then(
-      (res) => setBook(res.data.items)
+    axios(`${BASE_URL}books/v1/volumes?q=javascript`).then((res) =>
+      setBook(res.data.items)
     );
   };
   useEffect(() => {
